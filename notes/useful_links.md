@@ -14,8 +14,10 @@ https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a
 ## Dev notes
 
 **Package manager**
+
+To install new themes / gems:
 ```bash
-bundler
+bundle
 ```
 
 **Test locally**
