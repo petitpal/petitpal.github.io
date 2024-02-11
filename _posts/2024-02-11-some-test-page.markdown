@@ -1,9 +1,12 @@
 ---
 layout: post
 title:  "Some test page"
-date:   2024-02-10
+date:   2024-02-11
 categories: test
 ---
+This post is a bit longer - which is nice
+
+## Let's get into it
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:

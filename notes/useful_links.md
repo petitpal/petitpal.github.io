@@ -25,6 +25,12 @@ bundle
 bundle exec jekyll serve
 ```
 
+or
+
+```bash
+bundle exec jekyll serve --watch --incremental
+```
+
 **Gemfile**
 Needed to update plugins to include csv and webrick, as follows
 ```yaml
@@ -38,3 +44,11 @@ end
 See:
 - [CSV](https://rubygems.org/gems/csv/versions/3.0.0?locale=en)
 - [webrick](https://rubygems.org/gems/webrick)
+
+
+# theme references
+https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+https://github.com/jekyll/minima
+
+# kramdown ref
+https://kramdown.gettalong.org/quickref.html
