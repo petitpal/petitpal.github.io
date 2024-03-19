@@ -22,7 +22,7 @@
                     {% if posts.length > 0 %}
                         {% set mostRecentPost = posts | getMostRecentPost %}
                         {% if mostRecentPost %}
-                            {{ mostRecentPost.date | htmlDateString }}
+                            {{ mostRecentPost.date | readableDate }}
                         {% endif %}
                     {% endif %}
                 </span>
