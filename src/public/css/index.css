@@ -135,7 +135,7 @@ h6 { font-size: 1.1rem; }
 }
 
 .nav {
-	display: flex;
+	/* display: flex; */
 	list-style: none;
 	justify-content: right;
 	align-self: center;
@@ -144,6 +144,7 @@ h6 { font-size: 1.1rem; }
 .nav-item {
 	padding-left: 2rem;
 	font-size: 1.3rem;
+	display: inline-block;
 }
 
 .nav a[href] {
