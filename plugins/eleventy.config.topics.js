@@ -1,6 +1,6 @@
 
 const config = {
-        showEmptyTopics: true,
+        showEmptyTopics: false,
 
         // supports: displayOrder or title
         topicSortOrder: 'displayOrder',
