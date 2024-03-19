@@ -59,12 +59,9 @@ main a[href] {
 
 
 
-table {
-	margin: 1em 0;
-}
 table td,
 table th {
-	padding-right: 1rem;
+	padding: 0.25rem;
 }
 
 table th,
