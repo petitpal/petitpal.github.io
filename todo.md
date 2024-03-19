@@ -6,6 +6,7 @@ html:
 - dark / light theme button
 
 project:
+- topics pages don't build
 - polish pipeline
 
 Future:
