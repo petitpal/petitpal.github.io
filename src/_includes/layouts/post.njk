@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+---
+{# Only include the syntax highlighter CSS on blog posts #}
+{% set css %}
+	{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
+	{% include "src/public/css/prism-diff.css" %}
+{% endset %}
+<style>{{ css | cssmin | safe }}</style>
+
+{% include "../share.njk" %}
+<h2>{{ title }}</h2>
+
+<ul class="post-metadata">
+	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+	{%- for tag in tags | filterTagList %}
+	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+	{%- endfor %}
+</ul>
+
+{{ content | safe }}
+
+{%- if collections.posts %}
+	{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+	{%- set nextPost = collections.posts | getNextCollectionItem %}
+	{%- if nextPost or previousPost %}
+	<ul class="links-nextprev">
+		{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+		{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+	</ul>
+	{%- endif %}
+{%- endif %}
+
+<h2>Want to talk about this?</h2>
+I don't have a comment section on my blog at the moment, but I'm always happy to <a href="https://hachyderm.io/@paulnewman" target="_newtab">chat on Mastadon</a>
+

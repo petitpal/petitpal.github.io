@@ -1,0 +1,15 @@
+<div class="social-media">
+  <p>Find me on</p>
+  <ul class="social-media-list">
+    {% for item in social %}
+    <li>
+      <a rel="me" href="{{ item.url }}" target="_blank" title="{{ item.alt }}">
+        {{ item.alt }}
+        <svg>
+          <use xlink:href="/img/social-icons.svg#{{ item.icon }}"></use>
+        </svg>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

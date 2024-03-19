@@ -1,0 +1,38 @@
+<div class="topic-container">
+{% set topics = topicdata | orderedTopicKeys %}
+{% set postsByTopic = collections.posts | groupPostsByTopic %}
+
+{% for topicKey in topics %}
+
+    {% set topicValue = topicdata[topicKey] %}
+    {% set posts = postsByTopic.get(topicKey) %}
+
+    {% if eleventyTopicsConfig.showEmptyTopics==true or posts.length > 0 %}
+        <div class="topic">
+            
+            <h2><a href="./topics/{{ topicKey }}/">{{ topicValue.title }}</a></h2>
+            
+            <section class="topic-metadata">
+                <span>
+                    posts:
+                    {{ posts.length | default(0) }}
+                </span>
+                <span>
+                    most recent:
+                    {% if posts.length > 0 %}
+                        {% set mostRecentPost = posts | getMostRecentPost %}
+                        {% if mostRecentPost %}
+                            {{ mostRecentPost.date | htmlDateString }}
+                        {% endif %}
+                    {% endif %}
+                </span>
+            </section>
+
+            <section class="topic-description">
+                {{ topicValue.description }}
+            </section>
+        </div>
+    {% endif %}
+
+{% endfor %}
+</div>

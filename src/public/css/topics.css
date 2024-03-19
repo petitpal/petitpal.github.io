@@ -1,0 +1,27 @@
+.topic-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-gap: 1rem;
+}
+
+.topic {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-gap: 0;
+}
+
+.topic > section {
+    margin-bottom: 0.5rem;
+}
+
+.topic h2 {
+    color: var(--topic-heading);
+}
+
+.topic .topic-metadata {
+    font-size: 0.8rem;
+}
+
+.topic .topic-metadata span:not(:last-of-type) {
+    margin-right: 1rem;
+}

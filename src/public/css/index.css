@@ -1,0 +1,272 @@
+:root {
+	--syntax-tab-size: 2;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+html {
+	font-family: var(--font-family);
+	background-image:
+		url('/img/bg-texture.webp'),
+		linear-gradient(120deg, var(--background-grad-dark), var(--background-grad-light));
+		
+	background-repeat:
+		repeat,
+		no-repeat;
+	min-height: 100%;
+	min-width: 42rem;
+}
+
+body {
+	color: var(--text-color);
+	max-width: 70rem;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 0.8rem;
+}
+
+
+main {
+	background-color: var(--page-color);
+	flex-grow: 1;
+	padding: 1rem;
+}
+
+
+a[href] {
+	color: var(--text-color-link);
+	text-decoration: none;
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+
+main a[href] {
+	text-decoration: underline;
+}
+
+.links-nextprev {
+	list-style: none;
+	padding: 1em 0;
+}
+
+
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1rem;
+}
+
+table th,
+table tr:nth-child(even) {
+	background-color: var(--tablerow-backround-alt);
+}
+
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: 400;
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+	color: var(--heading-color);
+}
+
+h1 { font-size: 1.7rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.1rem; }
+
+
+
+.title {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.title .homelink {
+	align-self: center;
+}
+
+.title a h1 {
+	color: var(--header-color);
+}
+
+.title a:hover h1 {
+	color: var(--header-color-hover);
+}
+
+.title a:hover svg {
+	fill: var(--header-color-hover);
+}
+
+.nav {
+	display: flex;
+	list-style: none;
+	justify-content: right;
+	align-self: center;
+}
+
+.nav-item {
+	padding-left: 2rem;
+	font-size: 1.3rem;
+}
+
+.nav a[href] {
+	text-decoration: none;
+	color: var(--nav-color);
+}
+
+.nav a[href]:hover {
+	color: var(--nav-color-hover);
+}
+
+.nav a[href][aria-current="page"] {
+	color: var(--nav-color-current);
+}
+
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding-left: 0;
+}
+
+.postlist-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+.postlist-item time {
+	font-size: 0.8rem;
+}
+
+.postlist-item p {
+	margin-top: 0.4rem;
+}
+
+.postlist-item a[href] {
+	font-size: 1.2em;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: lowercase;
+	font-style: italic;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.9rem;
+}
+.post-metadata time {
+	margin-right: 1rem;
+}
+
+
+.social-media {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-media-list a svg {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+	vertical-align: middle;
+	fill: var(--social-color);
+	margin-left: 0.25em;
+}
+
+.social-media-list a:hover svg {
+	fill: var(--social-color-hover)
+}
+
+.social-media-list {
+	list-style: none;
+	padding: 0;
+}
+
+.social-media-list li {
+	display: inline-block;
+	margin-left: 2rem;
+}
+
+
+
+
+.social-share {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: right;
+}
+
+.social-share-list {
+	list-style: none;
+	padding: 0;
+}
+
+.social-share-list li {
+	display: inline-block;
+	margin-left: 1rem;
+}
+
+.social-share-list a svg {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+	vertical-align: middle;
+	fill: var(--social-color);
+	margin-left: 0.25em;
+}
+
+.social-share-list a:hover svg {
+	fill: var(--social-color-hover)
+}

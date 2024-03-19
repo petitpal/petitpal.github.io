@@ -1,0 +1,16 @@
+---
+permalink: /tags/
+layout: layouts/home.njk
+eleventyNavigation:
+  key: tags
+  order: 20
+---
+<ul class="tagcloud">
+{% for tag in collections.all | getAllTags | filterTagList %}
+	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+  {% set postsForTag = collections.posts | countPostsForTag(tag) %}
+  {% if postsForTag > 0 %}
+	<li><a href="{{ tagUrl }}" class="post-tag" style="--dataposts: {{ postsForTag }};">{{ tag }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>

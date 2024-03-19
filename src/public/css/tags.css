@@ -1,0 +1,22 @@
+
+.tagcloud {
+    max-width: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    list-style: none;
+    padding-left: 0;
+    margin: auto;
+}
+
+.tagcloud li {
+    margin: 0.25rem;
+}
+
+/* need to set an upper limit on this at some point! */
+.tagcloud a[href] {
+    font-size: calc(var(--dataposts) * 1rem);
+    text-decoration: none;
+}

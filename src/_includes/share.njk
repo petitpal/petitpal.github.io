@@ -1,0 +1,17 @@
+{% set shareTargets = socialsharedata | allowed %}
+{% if shareTargets.length > 0 %}
+<section class="social-share">
+	<p>Share this page to</p>
+	<ul class="social-share-list">
+		{% for shareTarget in shareTargets %}
+		<li>
+			<a href="{{shareTarget | shareLink(title, page.url)}}" title="{{shareTarget.name}}" target="_newtab">
+				<svg>
+					<use xlink:href="{{ shareTarget.icon }}"></use>
+				</svg>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endif %}

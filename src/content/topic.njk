@@ -1,0 +1,16 @@
+---
+pagination:
+  data: topicdata
+  size: 1
+  alias: topic
+layout: layouts/base.njk
+eleventyComputed:
+  title: Topic “{{ topic }}”
+permalink: /topics/{{ topic | slugify }}
+---
+{% set topicData = topicdata[topic] %}
+<h2>{{ topicData.title }}</h2>
+<p>{{ topicData.description }}</p>
+
+{% set postslist = collections.posts | filterPostsByTopic(topic) %} 
+{% include "postslist.njk" %}
