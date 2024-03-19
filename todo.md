@@ -6,9 +6,7 @@ html:
 - dark / light theme button
 
 project:
-- add to github
-- publishing pipeline
-
+- polish pipeline
 
 Future:
 - share: discord
