@@ -34,7 +34,7 @@ main {
 	background-color: var(--page-color);
 	flex-grow: 1;
 	padding: 1rem;
-	overflow: scroll;
+	overflow: auto;
 }
 
 
