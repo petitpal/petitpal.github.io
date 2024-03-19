@@ -113,7 +113,7 @@ h6 { font-size: 1.1rem; }
 
 .title {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: auto 1fr;
 }
 
 .title .homelink {
@@ -132,11 +132,13 @@ h6 { font-size: 1.1rem; }
 	fill: var(--header-color-hover);
 }
 
-.nav {
-	/* display: flex; */
-	list-style: none;
-	justify-content: right;
+nav {
 	align-self: center;
+	justify-self: right;
+}
+
+.nav {
+	list-style: none;
 }
 
 .nav-item {
