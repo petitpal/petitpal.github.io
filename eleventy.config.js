@@ -74,7 +74,7 @@ module.exports = function(eleventyConfig) {
 			input: "src/content",
 			includes: "../_includes",
 			data: "../_data",
-			output: "dist"
+			output: "_site"
 		},
 
 		pathPrefix: "/",
