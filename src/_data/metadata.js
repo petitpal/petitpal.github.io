@@ -1,8 +1,8 @@
 module.exports = {
-	title: "perspectives on programming",
+	title: "programming perspectives",
 	url: "https://petitpal.github.io/",
 	language: "en",
-	description: "Some perspectives from someone who's been a professional software engineer since 1997",
+	description: "Some perspectives on programming",
 	author: {
 		name: "Paul Newman",
 		// email: "",
