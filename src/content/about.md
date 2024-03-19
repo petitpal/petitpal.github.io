@@ -20,4 +20,4 @@ We all stand on the shoulders of giants - this is a list of Open Source licensed
 |Social media share links|[https://github.com/bradvin/social-share-urls](https://github.com/bradvin/social-share-urls)|
 |Social media icons|[https://iconmonstr.com](https://iconmonstr.com)|
 |Sharing for Mastodon|[https://dev.to/codepo8/adding-a-share-to-mastodon-link-to-any-web-site-485m](https://dev.to/codepo8/adding-a-share-to-mastodon-link-to-any-web-site-485m)|
-|Minifying CSS in 11ty|https://www.11ty.dev/docs/quicktips/inline-css|
+|Minifying CSS in 11ty|[https://www.11ty.dev/docs/quicktips/inline-css](https://www.11ty.dev/docs/quicktips/inline-css)|
