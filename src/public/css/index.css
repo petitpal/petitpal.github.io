@@ -17,7 +17,7 @@ html {
 		repeat,
 		no-repeat;
 	min-height: 100%;
-	min-width: 42rem;
+	/* min-width: 42rem; */
 }
 
 body {
