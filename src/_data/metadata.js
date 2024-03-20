@@ -7,5 +7,6 @@ module.exports = {
 		name: "Paul Newman",
 		// email: "",
 		url: "https://petitpal.github.io/about"
-	}
+	},
+	googleAnalyticsTag: "G-6K76DGW733"
 }

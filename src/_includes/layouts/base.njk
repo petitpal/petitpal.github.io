@@ -24,6 +24,18 @@
 		{% endset %}
 		<style>{{ css | cssmin | safe }}</style>
 
+
+		{% if metadata.googleAnalyticsTag and metadata.googleAnalyticsTag != ""  %}
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id={{metadata.googleAnalyticsTag}}"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', '{{metadata.googleAnalyticsTag}}');
+			</script>
+		{% endif %}
+
 	</head>
 	<body>
 		<header>
