@@ -26,12 +26,12 @@
 	--background-grad-light: var(--base3);
 	--page-color: var(--base2);
 	
-	--heading-color: var(--base02);
+	--heading-color: var(--base00);
 
 	--header-color: var(--violet);
 	--header-color-hover: var(--magenta);
 
-	--text-color: var(--base03);
+	--text-color: var(--base02);
 	--text-color-link: var(--violet);
 	--text-color-link-active: var(--magenta);
 
@@ -51,7 +51,7 @@
 		--background-grad-light: var(--base03);
 		--page-color: var(--base02);
 		
-		--heading-color: var(--base2);
+		--heading-color: var(--base00);
 
 		--header-color: var(--yellow);
 		--header-color-hover: var(--magenta);
