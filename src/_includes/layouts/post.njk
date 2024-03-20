@@ -21,17 +21,16 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
+<h2>What next?</h2>
+I don't have a comment section on my blog at the moment, but I'm always happy to <a href="https://hachyderm.io/@paulnewman" target="_newtab">chat on Mastadon</a>
+
 {%- if collections.posts %}
 	{%- set previousPost = collections.posts | getPreviousCollectionItem %}
 	{%- set nextPost = collections.posts | getNextCollectionItem %}
 	{%- if nextPost or previousPost %}
 	<ul class="links-nextprev">
-		{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-		{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+		{%- if previousPost %}<li>Previous post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+		{%- if nextPost %}<li>Next post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
 	</ul>
 	{%- endif %}
 {%- endif %}
-
-<h2>Want to talk about this?</h2>
-I don't have a comment section on my blog at the moment, but I'm always happy to <a href="https://hachyderm.io/@paulnewman" target="_newtab">chat on Mastadon</a>
-
